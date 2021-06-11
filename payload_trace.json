@@ -1,0 +1,32 @@
+{
+    "resource_spans": [
+        {
+            "resource": {
+                "attributes": [
+                    {
+                        "key": "service.name",
+                        "value": { "string_value": "grpcurl" }
+                    }
+                ]
+            },
+            "instrumentation_library_spans": [
+                {
+                    "instrumentation_library": {
+                        "name": "TeddyBearLibrary",
+                        "version": "0.0.1-teddy"
+                    },
+                    "spans": [
+                        {
+                            "trace_id": "0000000000000000",
+                            "span_id": "00000000",
+                            "trace_state": "",
+                            "parent_span_id": [],
+                            "name": "TeddyBearSpan",
+                            "kind": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

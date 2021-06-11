@@ -1,0 +1,37 @@
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": [
+                    {
+                        "key": "service.name",
+                        "value": { "string_value": "grpcurl" }
+                    }
+                ]
+            },
+            "instrumentation_library_metrics": [
+                {
+                    "instrumentation_library": {
+                        "name": "TeddyBearLibrary",
+                        "version": "0.0.1-teddy"
+                    },
+                    "metrics": [
+                        {
+                            "name": "my.metric",
+                            "description": "My metric",
+                            "unit": "",
+                            "double_gauge": {
+                                "data_points": [
+                                    {
+                                        "time_unix_nano": 1623444666000000000,
+                                        "value": 123
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
