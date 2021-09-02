@@ -20,7 +20,7 @@
                             "name": "my.metric",
                             "description": "My metric",
                             "unit": "",
-                            "double_gauge": {
+                            "int_sum": {
                                 "data_points": [
                                     {
                                         "time_unix_nano": 1623444666000000000,
