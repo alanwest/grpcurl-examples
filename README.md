@@ -1,4 +1,4 @@
-# Send stuff and things with grpcurl to New Relic
+# Send stuff over OTLP with grpcurl to New Relic
 
 ## Install grpcurl
 
