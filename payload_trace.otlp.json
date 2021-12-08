@@ -17,10 +17,12 @@
                     },
                     "spans": [
                         {
-                            "trace_id": "0000000000000000",
-                            "span_id": "00000000",
+                            "trace_id": "MDAwMDAwMDAwMDAwMDAwMA==",
+                            "span_id": "MDAwMDAwMDA=",
                             "trace_state": "",
-                            "parent_span_id": [],
+                            "parent_span_id": "",
+                            "start_time_unix_nano": 1638995638000000000,
+                            "end_time_unix_nano": 1638995648000000000,
                             "name": "TeddyBearSpan",
                             "kind": 2
                         }
