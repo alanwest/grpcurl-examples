@@ -1,5 +1,14 @@
 # Send stuff and things with grpcurl to New Relic
 
+## Install grpcurl
+
+On a mac using Homebrew
+```shell
+brew install grpcurl
+```
+
+More info here https://github.com/fullstorydev/grpcurl
+
 ## Set some environment variables
 ```shell
 export NEW_RELIC_API_KEY=your_api_key_here
