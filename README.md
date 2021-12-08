@@ -17,7 +17,7 @@ export OTLP_ENDPOINT=otlp.nr-data.net:4317
 
 ## Send a trace payload
 ```shell
-cat payload_trace.oltp.json | \
+cat payload_trace.otlp.json | \
 grpcurl \
     -d @ \
     -proto protos/opentelemetry/proto/collector/trace/v1/trace_service.proto \
