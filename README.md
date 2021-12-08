@@ -56,11 +56,11 @@ grpcurl \
 
 ---
 
-OpenTelemetry Protos are the ones [used by the collector at this point in time](https://github.com/open-telemetry/opentelemetry-collector/tree/0594aa1ade95c33443c0bd036f77301d3a8164e4/model/internal).
+This repo is using the v0.11.0 OpenTelemetry Protos.
 
 That is I got 'em like so:
 ```shell
 git clone git@github.com:open-telemetry/opentelemetry-proto.git
 cd opentelemetry-proto
-git checkout 8672494217bfc858e2a82a4e8c623d4a5530473a
+git checkout v0.11.0
 ```
