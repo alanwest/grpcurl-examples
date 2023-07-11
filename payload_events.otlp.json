@@ -1,0 +1,39 @@
+{
+    "resource_logs": [
+        {
+            "resource": {
+                "attributes": [
+                    {
+                        "key": "service.name",
+                        "value": { "string_value": "grpcurl" }
+                    }
+                ]
+            },
+            "scope_logs": [
+                {
+                    "scope": {
+                        "name": "MyScope",
+                        "version": "0.1.0"
+                    },
+                    "log_records": [
+                        {
+                            "body": {
+                                "string_value": "This is a log message"
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.domain",
+                                    "value": { "string_value": "MyCustomEventDomain" }
+                                },
+                                {
+                                    "key": "event.name",
+                                    "value": { "string_value": "MyCustomEventName" }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
