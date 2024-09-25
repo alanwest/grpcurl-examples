@@ -28,7 +28,8 @@ export OTLP_ENDPOINT=otlp.nr-data.net:4317
 ```shell
 curl -vX POST https://${OTLP_ENDPOINT}/v1/traces \
     -d @payload_trace.otlp.json \
-    --header "Content-Type: application/json" --header "api-key: ${NEW_RELIC_API_KEY}"
+    --header "Content-Type: application/json" \
+    --header "api-key: ${NEW_RELIC_API_KEY}"
 ```
 
 ### curl: Send a metric payload
@@ -36,7 +37,8 @@ curl -vX POST https://${OTLP_ENDPOINT}/v1/traces \
 ```shell
 curl -vX POST https://${OTLP_ENDPOINT}/v1/metrics \
     -d @payload_metrics.otlp.json \
-    --header "Content-Type: application/json" --header "api-key: ${NEW_RELIC_API_KEY}"
+    --header "Content-Type: application/json" \
+    --header "api-key: ${NEW_RELIC_API_KEY}"
 ```
 
 ### curl: Send a log payload
@@ -44,7 +46,8 @@ curl -vX POST https://${OTLP_ENDPOINT}/v1/metrics \
 ```shell
 curl -vX POST https://${OTLP_ENDPOINT}/v1/logs \
     -d @payload_logs.otlp.json \
-    --header "Content-Type: application/json" --header "api-key: ${NEW_RELIC_API_KEY}"
+    --header "Content-Type: application/json" \
+    --header "api-key: ${NEW_RELIC_API_KEY}"
 ```
 
 ### curl: Send an event payload
@@ -52,7 +55,8 @@ curl -vX POST https://${OTLP_ENDPOINT}/v1/logs \
 ```shell
 curl -vX POST https://${OTLP_ENDPOINT}/v1/logs \
     -d @payload_events.otlp.json \
-    --header "Content-Type: application/json" --header "api-key: ${NEW_RELIC_API_KEY}"
+    --header "Content-Type: application/json" \
+    --header "api-key: ${NEW_RELIC_API_KEY}"
 ```
 
 ## Using grpcurl
