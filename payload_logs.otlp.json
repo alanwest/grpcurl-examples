@@ -18,81 +18,50 @@
                     "log_records": [
                         {
                             "body": {
-                                "string_value": "1. This will be a custom event in New Relic"
+                                "string_value": "Some body"
                             },
                             "attributes": [
                                 {
-                                    "key": "event.domain",
-                                    "value": { "string_value": "newrelic.SomeDomain" }
+                                    "key": "trace_id",
+                                    "value": { "string_value": "1234" }
                                 },
                                 {
-                                    "key": "event.name",
-                                    "value": { "string_value": "SomeEventName" }
+                                    "key": "span_id",
+                                    "value": { "string_value": "1234" }
                                 }
                             ]
                         },
                         {
                             "body": {
-                                "string_value": "2. This will be a custom event in New Relic, but it should not be because event.domain is not prefixed with `newrelic`"
+                                "string_value": "Some body"
                             },
                             "attributes": [
                                 {
-                                    "key": "event.domain",
-                                    "value": { "string_value": "SomeDomain" }
+                                    "key": "trace.id",
+                                    "value": { "string_value": "1234" }
                                 },
                                 {
-                                    "key": "event.name",
-                                    "value": { "string_value": "SomeEventName" }
+                                    "key": "span.id",
+                                    "value": { "string_value": "1234" }
                                 }
                             ]
                         },
                         {
                             "body": {
-                                "string_value": "3. A `.` in event.name fails to be ingested. There is no NrIntegrationError."
+                                "string_value": "Some body"
                             },
-                            "attributes": [
-                                {
-                                    "key": "event.domain",
-                                    "value": { "string_value": "newrelic.SomeDomain" }
-                                },
-                                {
-                                    "key": "event.name",
-                                    "value": { "string_value": "MyCompany.SomeEventName" }
-                                }
-                            ]
+                            "trace_id": "1234",
+                            "span_id": "1234"
                         },
                         {
                             "body": {
-                                "string_value": "4. This will be a log in New Relic"
-                            },
-                            "attributes": [
-                                {
-                                    "key": "event.domain",
-                                    "value": { "string_value": "newrelic.SomeDomain" }
-                                }
-                            ]
+                                "string_value": "{ \"trace_id\": 1234, \"span_id\":1234 }"
+                            }
                         },
                         {
                             "body": {
-                                "string_value": "5. This will be a log in New Relic"
-                            },
-                            "attributes": [
-                                {
-                                    "key": "event.name",
-                                    "value": { "string_value": "MyCompany.SomeEventName" }
-                                }
-                            ]
-                        },
-                        {
-                            "body": {
-                                "string_value": "6. This will be a log in New Relic. This was the recommendation offered by New Relic's experts in OpenTelemetry for how to offer New Relic custom events using OpenTelemetry."
-                            },
-                            "attributes": [
-                                {
-                                    "key": "newrelic.event.type",
-                                    "value": { "string_value": "SomeEventName" }
-                                }
-                            ]
+                                "string_value": "{ \"trace.id\": 1234, \"span.id\":1234 }"
+                            }
                         }
                     ]
                 }
