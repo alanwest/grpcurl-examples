@@ -54,6 +54,19 @@ grpcurl \
     opentelemetry.proto.collector.logs.v1.LogsService/Export
 ```
 
+## Send an event payload
+```shell
+cat payload_events.otlp.json | \
+grpcurl \
+    -d @ \
+    -proto protos/opentelemetry/proto/collector/logs/v1/logs_service.proto \
+    -import-path protos\
+    -vv \
+    -H "api-key: ${NEW_RELIC_API_KEY}" \
+    ${OTLP_ENDPOINT} \
+    opentelemetry.proto.collector.logs.v1.LogsService/Export
+```
+
 ---
 
 This repo is using the v0.11.0 OpenTelemetry Protos.

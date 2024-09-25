@@ -17,14 +17,27 @@
                     },
                     "metrics": [
                         {
-                            "name": "my.metric",
-                            "description": "My metric",
+                            "name": "my.gauge",
+                            "description": "A gauge",
                             "unit": "",
-                            "int_sum": {
+                            "gauge": {
                                 "data_points": [
                                     {
                                         "time_unix_nano": 1623444666000000000,
-                                        "value": 123
+                                        "as_int": 123
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "my.histogram",
+                            "description": "A histogram",
+                            "unit": "",
+                            "gauge": {
+                                "data_points": [
+                                    {
+                                        "time_unix_nano": 1623444666000000000,
+                                        "as_int": 123
                                     }
                                 ]
                             }

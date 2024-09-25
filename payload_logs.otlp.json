@@ -6,25 +6,93 @@
                     {
                         "key": "service.name",
                         "value": { "string_value": "grpcurl" }
-                    },
-                    {
-                        "key": "telemetry.sdk.name",
-                        "value": { "string_value": "opentelemetry" }
                     }
                 ]
             },
-            "instrumentation_library_logs": [
+            "scope_logs": [
                 {
-                    "instrumentation_library": {
-                        "name": "TeddyBearLibrary",
-                        "version": "0.0.1-teddy"
+                    "scope": {
+                        "name": "MyScope",
+                        "version": "0.1.0"
                     },
-                    "logs": [
+                    "log_records": [
                         {
-                            "name": "TeddyBearLog",
                             "body": {
-                                "string_value": "This is a log message"
-                            }
+                                "string_value": "1. This will be a custom event in New Relic"
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.domain",
+                                    "value": { "string_value": "newrelic.SomeDomain" }
+                                },
+                                {
+                                    "key": "event.name",
+                                    "value": { "string_value": "SomeEventName" }
+                                }
+                            ]
+                        },
+                        {
+                            "body": {
+                                "string_value": "2. This will be a custom event in New Relic, but it should not be because event.domain is not prefixed with `newrelic`"
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.domain",
+                                    "value": { "string_value": "SomeDomain" }
+                                },
+                                {
+                                    "key": "event.name",
+                                    "value": { "string_value": "SomeEventName" }
+                                }
+                            ]
+                        },
+                        {
+                            "body": {
+                                "string_value": "3. A `.` in event.name fails to be ingested. There is no NrIntegrationError."
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.domain",
+                                    "value": { "string_value": "newrelic.SomeDomain" }
+                                },
+                                {
+                                    "key": "event.name",
+                                    "value": { "string_value": "MyCompany.SomeEventName" }
+                                }
+                            ]
+                        },
+                        {
+                            "body": {
+                                "string_value": "4. This will be a log in New Relic"
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.domain",
+                                    "value": { "string_value": "newrelic.SomeDomain" }
+                                }
+                            ]
+                        },
+                        {
+                            "body": {
+                                "string_value": "5. This will be a log in New Relic"
+                            },
+                            "attributes": [
+                                {
+                                    "key": "event.name",
+                                    "value": { "string_value": "MyCompany.SomeEventName" }
+                                }
+                            ]
+                        },
+                        {
+                            "body": {
+                                "string_value": "6. This will be a log in New Relic. This was the recommendation offered by New Relic's experts in OpenTelemetry for how to offer New Relic custom events using OpenTelemetry."
+                            },
+                            "attributes": [
+                                {
+                                    "key": "newrelic.event.type",
+                                    "value": { "string_value": "SomeEventName" }
+                                }
+                            ]
                         }
                     ]
                 }
