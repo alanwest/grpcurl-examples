@@ -9,21 +9,27 @@
                     }
                 ]
             },
-            "instrumentation_library_spans": [
+            "scope_spans": [
                 {
-                    "instrumentation_library": {
-                        "name": "TeddyBearLibrary",
-                        "version": "0.0.1-teddy"
+                    "scope": {
+                        "name": "MyScope",
+                        "version": "1.2.3",
+                        "attributes": [
+                            {
+                                "key": "scope_attribute",
+                                "value": { "string_value": "hello" }
+                            }
+                        ]
                     },
                     "spans": [
                         {
-                            "trace_id": "MDAwMDAwMDAwMDAwMDAwMA==",
-                            "span_id": "MDAwMDAwMDA=",
+                            "trace_id": "68a3a05e0348d2a2c1c3db34bc3fd2f5",
+                            "span_id": "3d0222f56b0e1e5d",
                             "trace_state": "",
                             "parent_span_id": "",
-                            "start_time_unix_nano": 1638995638000000000,
-                            "end_time_unix_nano": 1638995648000000000,
-                            "name": "TeddyBearSpan",
+                            "start_time_unix_nano": 1754100700000000000,
+                            "end_time_unix_nano": 1754100833000000000,
+                            "name": "MySpan",
                             "kind": 2
                         }
                     ]

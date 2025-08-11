@@ -9,11 +9,17 @@
                     }
                 ]
             },
-            "instrumentation_library_metrics": [
+            "scope_metrics": [
                 {
-                    "instrumentation_library": {
-                        "name": "TeddyBearLibrary",
-                        "version": "0.0.1-teddy"
+                    "scope": {
+                        "name": "MyScope",
+                        "version": "1.2.3",
+                        "attributes": [
+                            {
+                                "key": "scope_attribute",
+                                "value": { "string_value": "hello" }
+                            }
+                        ]
                     },
                     "metrics": [
                         {
